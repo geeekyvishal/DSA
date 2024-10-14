@@ -11,7 +11,10 @@ struct Node {
 // Function to create a new node
 struct Node* createNode(int coeff, int exp) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
- 
+    newNode->coefficient = coeff;
+    newNode->exponent = exp;
+    newNode->next = NULL;
+    newNode->prev = NULL;
     return newNode;
 }
 
